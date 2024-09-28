@@ -9,7 +9,7 @@ title: "Happy coding"
       Jekyllwind
     </span>
 
-    <span class="uppercase font-light">
+    <span class="uppercase font-light text-purple-500">
       A Jekyll + Tailwind CSS boilerplate
     </span>
   </h1>
