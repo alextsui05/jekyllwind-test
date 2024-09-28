@@ -1,5 +1,5 @@
-url: ''
-baseurl: ''
+url: 'https://alextsui05.github.io'
+baseurl: 'jekyllwind-test'
 title: 'Jekyllwind'
 
 plugins:
