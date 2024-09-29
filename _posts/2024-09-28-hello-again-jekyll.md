@@ -25,7 +25,6 @@ For example, here's a block of CSS that's applied to paragraphs on this page:
 ```
 
 # Tailwind
-{: .text-4xl .py-5}
 
 I decided I also wanted to learn how to work with Tailwind so I configured it into this project.
 I'm aware that Tailwind shines when you're able to apply the utility classes to style elements the way you like.
@@ -34,3 +33,49 @@ But Jekyll's appeal is that it supports publishing pages in Markdown, and Tailwi
 Actually, there are these things called [_inline attribute lists_](https://kramdown.gettalong.org/syntax.html#block-ials){:.underline} that let you style block and inline elements on the fly.
 Together with a layout that is properly styled with some base CSS, it feels like publishing a website is very flexible and ergonomic in 2024.
 
+# Nested CSS Support
+
+One point of confusion for me had to do with nested CSS support.
+At work we used Sass to be able to write CSS like this:
+
+```css
+.mod_dialog {
+  h1 {
+    font-size: 16pt;
+  }
+
+  p {
+    padding: 5px 0;
+  }
+}
+```
+
+This gets processed into the following:
+
+```css
+.mod_dialog h1 {
+  font-size: 16pt;
+}
+
+.mod_dialog p {
+  padding: 5px 0;
+}
+```
+
+As you can see, the first style has less duplication, so it's more readable and maintainable.
+At the very least, it saves on typing.
+If it's not too much trouble, it would be nice to have this feature.
+I was wondering if Tailwind supports this out of the box, and the answer seems to be yes, as long as you configure the bundled `postcss-nested` plugin.
+To verify that the plugin works, write some nested CSS and view the output gets processed down into non-nested rules.
+Make sure the CSS is actually used in your HTML, otherwise Tailwind will purge it from the output CSS.
+
+Interestingly enough, even if the processing doesn't work and the nested CSS gets passed through to the output CSS, a modern browser may still be able to parse it.
+Here is a screenshot of Firefox Dev Tools where the nested CSS is properly interpreted:
+
+![Cool beans]({{ "/assets/img/2024-09-29-nested-css.png" | relative_url }})
+
+By the way, the `&` ampersand is called the [nesting selector](ohttps://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector#browser_compatibility).
+This is based on a recent version of the [Nesting Module specification](https://drafts.csswg.org/css-nesting/#nest-selector) that describes the sort of behavior that I've come to expect from working with Sass at work.
+In particular, the nesting selectors are optional.
+It was in the older, initial specification that the nesting selector is required when followed by an identifier e.g. `h1` or `p` - see the explanation at the end of the [Nesting Style Rules](https://www.w3.org/TR/css-nesting-1/#nesting).
+Fortunately, it seems that this strict behavior has been made optional, and we don't need to worry about it if we use `postcss-nested`.

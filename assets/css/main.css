@@ -9,8 +9,29 @@
 @import "tailwindcss/utilities";
 
 @layer components {
-  .mod_post p {
-    text-indent: 20px;
-    padding-bottom: 10px;
+  .mod_post {
+    p {
+      @apply leading-7 indent-8;
+    }
+
+    h1 {
+      @apply text-4xl py-5;
+    }
+  }
+
+  .highlight {
+    @apply py-2;
+
+    pre {
+      @apply p-2;
+    }
+  }
+
+  .highlighter-rouge {
+    @apply py-2;
+
+    pre.highlight {
+      @apply p-2;
+    }
   }
 }

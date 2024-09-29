@@ -12,5 +12,8 @@ module.exports = {
       extend: {},
     },
   },
-  plugins: []
+  plugins: [],
+  safelist: [
+    '.highlighter-rouge',
+  ]
 }
