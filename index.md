@@ -56,7 +56,7 @@ console.log("Hello world");
 <ul>
   {% for post in site.posts %}
     <li>
-      <span class="font-bold pr-2">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url }}">{{ post.title }}</a>
+      <span class="font-bold pr-2">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{% link {{ post.path }} %}">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
