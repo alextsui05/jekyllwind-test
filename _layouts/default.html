@@ -4,11 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
+    <script type="text/javascript" src="{{ "/assets/js/main.js" | relative_url }}"></script>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
   <body>
     <div class="py-24 max-w-4xl mx-auto">
-      {{ content }}
+      <div >
+        {{ content }}
+      </div>
+      <div class="pt-5">
+        <a href="#" data-toggle-dark>Toggle dark mode</a>
+      </div>
     </div>
   </body>
 </html>
