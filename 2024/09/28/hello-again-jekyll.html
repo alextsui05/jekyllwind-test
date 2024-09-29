@@ -23,7 +23,24 @@ This seemed like a place to start, until I thought it would be nice to share and
 This makes it difficult without some tool support.
 This brought me back to Jekyll.</p>
 
-<p>Jekyll is a static site generator that comes with some useful features, including rendering blocks of syntax highlighted code.</p>
+<p>Jekyll is a static site generator that comes with some useful features, including rendering blocks of syntax highlighted code.
+You can render blocks of code by using the provided <a href="https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting"><code class="language-plaintext highlighter-rouge">highlight</code></a> Liquid tag.
+For example, here’s a block of CSS that’s applied to paragraphs on this page:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.mod_post</span> <span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">text-indent</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span> 
+</code></pre></div></div>
+
+<h1 class="text-4xl py-5" id="tailwind">Tailwind</h1>
+
+<p>I decided I also wanted to learn how to work with Tailwind so I configured it into this project.
+I’m aware that Tailwind shines when you’re able to apply the utility classes to style elements the way you like.
+I do intend to create some more freeform content to get some frontend practice, and Jekyll gives you the freedom and flexibility to use HTML.
+But Jekyll’s appeal is that it supports publishing pages in Markdown, and Tailwind becomes less applicable in this mode <del>as there’s no obvious way to attach utility classes</del>.
+Actually, there are these things called <a href="https://kramdown.gettalong.org/syntax.html#block-ials" class="underline"><em>inline attribute lists</em></a> that let you style block and inline elements on the fly.
+Together with a layout that is properly styled with some base CSS, it feels like publishing a website is very flexible and ergonomic in 2024.</p>
 
 
       </div>
