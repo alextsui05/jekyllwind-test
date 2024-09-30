@@ -11,7 +11,7 @@
     <div class="py-24 max-w-4xl mx-auto">
       <div class="sticky top-0 bg-white dark:bg-slate-800 pb-3">
   <nav>
-    <ul class="flex flex-col md:space-x-8 md:flex-row md:py-3">
+    <ul class="flex flex-col space-y-3 md:space-y-0 md:space-x-8 md:flex-row md:py-3">
       <li>
         <a href="/jekyllwind-test/">Home</a>
       </li>
@@ -98,7 +98,7 @@ Here is a screenshot of Firefox Dev Tools where the nested CSS is properly inter
 
 <p><img src="/jekyllwind-test/assets/img/2024-09-29-nested-css.png" alt="Cool beans" /></p>
 
-<p>By the way, the <code class="language-plaintext highlighter-rouge">&amp;</code> ampersand is called the <a href="ohttps://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector#browser_compatibility">nesting selector</a>.
+<p>By the way, the <code class="language-plaintext highlighter-rouge">&amp;</code> ampersand is called the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector#browser_compatibility">nesting selector</a>.
 This is based on a recent version of the <a href="https://drafts.csswg.org/css-nesting/#nest-selector">Nesting Module specification</a> that describes the sort of behavior that I’ve come to expect from working with Sass at work.
 In particular, the nesting selectors are optional.
 It was in the older, initial specification that the nesting selector is required when followed by an identifier e.g. <code class="language-plaintext highlighter-rouge">h1</code> or <code class="language-plaintext highlighter-rouge">p</code> - see the explanation at the end of the <a href="https://www.w3.org/TR/css-nesting-1/#nesting">Nesting Style Rules</a>.
