@@ -74,7 +74,7 @@ Here is a screenshot of Firefox Dev Tools where the nested CSS is properly inter
 
 ![Cool beans]({{ "/assets/img/2024-09-29-nested-css.png" | relative_url }})
 
-By the way, the `&` ampersand is called the [nesting selector](ohttps://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector#browser_compatibility).
+By the way, the `&` ampersand is called the [nesting selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector#browser_compatibility).
 This is based on a recent version of the [Nesting Module specification](https://drafts.csswg.org/css-nesting/#nest-selector) that describes the sort of behavior that I've come to expect from working with Sass at work.
 In particular, the nesting selectors are optional.
 It was in the older, initial specification that the nesting selector is required when followed by an identifier e.g. `h1` or `p` - see the explanation at the end of the [Nesting Style Rules](https://www.w3.org/TR/css-nesting-1/#nesting).
